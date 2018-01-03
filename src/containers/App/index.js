@@ -2,22 +2,29 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import logo from '../../logo.svg';
-import './App.css';
 
 const Wrapper = styled.div`
-  background-color: red;
   text-align: center;
 `;
 
+const Logo = styled.img`
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+`;
 class App extends Component {
   render() {
     return (
       <Wrapper>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header>
+          <Logo src={logo} alt="logo" />
+          <h1>Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <p>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </Wrapper>
