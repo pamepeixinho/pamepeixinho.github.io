@@ -7,7 +7,7 @@ import Section from '../../../components/Section';
 class Experience extends React.Component {
   render() {
     return (
-      <Section title="Projects" id={AnchorsName.experience}>
+      <Section title="Experience" id={AnchorsName.experience}>
         <p> teste </p>
       </Section>
     );
