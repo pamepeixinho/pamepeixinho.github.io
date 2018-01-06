@@ -8,6 +8,11 @@ const Anchor = styled(Scrollchor)`
   margin: 5px;
 `;
 
+const Wrapper = styled.div`
+  overflow: auto;
+  padding: 5px;
+`;
+
 class MainMenu extends React.PureComponent {
 
   goTo = (anchorName) => `#${anchorName}`
@@ -22,18 +27,16 @@ class MainMenu extends React.PureComponent {
 
   render() {
     return (
-      <React.Fragment>
-        <div>
-          <Anchor to="">About</Anchor>
-          <Anchor to={this.experience}>Experience</Anchor>
-          <Anchor to={this.education}>Education</Anchor>
-          <Anchor to={this.projects}>Projects</Anchor>
-          <Anchor to={this.articles}>Articles</Anchor>
-          <Anchor to={this.awards}>Awards</Anchor>
-          <Anchor to={this.events}>Events</Anchor>
-          <Anchor to={this.skills}>Skills</Anchor>
-        </div>
-      </React.Fragment>
+      <Wrapper>
+        <Anchor to="">About</Anchor>
+        <Anchor to={this.experience}>Experience</Anchor>
+        <Anchor to={this.education}>Education</Anchor>
+        <Anchor to={this.projects}>Projects</Anchor>
+        <Anchor to={this.articles}>Articles</Anchor>
+        <Anchor to={this.awards}>Awards</Anchor>
+        <Anchor to={this.events}>Events</Anchor>
+        <Anchor to={this.skills}>Skills</Anchor>
+      </Wrapper>
     );
   }
 }
