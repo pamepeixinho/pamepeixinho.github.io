@@ -26,7 +26,6 @@ const ContentWrapper = styled.div`
 `;
 
 const Description = ContentWrapper.extend`
-  width: 640px;
   margin: 0 auto;
   font-weight: 300;
   color: ${Colors.secondary};
