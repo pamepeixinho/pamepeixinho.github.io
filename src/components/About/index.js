@@ -42,6 +42,7 @@ class About extends React.PureComponent {
         <ProfileRoundedPicture src={ProfilePicture} alt="profile picture" />
         <ContentWrapper>
           <TitleName>Pamela</TitleName> <BoldTitleName>Peixinho</BoldTitleName>
+          <p> pamelapeixinho@outlook.com / pameiupip@gmail.com </p>
         </ContentWrapper>
         <Description>
           <p>
