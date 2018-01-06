@@ -3,19 +3,27 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Colors from '../../assets/colors';
+import Dimens from '../../assets/dimens';
 
 const LineSeparator = styled.div`
+  margin-top: ${Dimens.defaultSpacing};
   height: 1px;
-  background-color: ${Colors.secondary};
+  background-color: ${`${Colors.secondary}5c`};
+`;
+
+const Title = styled.p`
+  font-weight: 600;
+  font-size: 20px;
+  color: ${Colors.primary};
 `;
 
 class Section extends React.Component {
   render() {
     return (
       <div id={this.props.id}>
-        <p>{this.props.title}</p>
-        <LineSeparator />
+        <Title>{this.props.title}</Title>
         {this.props.children}
+        <LineSeparator />
       </div>
     );
   }
