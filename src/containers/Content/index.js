@@ -1,49 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import MainMenu from '../../components/MainMenu';
-import AnchorsName from '../../constants';
 
-const Div = styled.div`
-  background-color: red;
-  margin-bottom: 16px;
-  height: 200px
-`;
+import Experience from './Experience';
+import Education from './Education';
+import Events from './Events';
+import Articles from './Articles';
+import Awards from './Awards';
+import Projects from './Projects';
+import Skills from './Skills';
 
 class Content extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <MainMenu />
-
-        <Div id={AnchorsName.experience}>
-          experience
-        </Div>
-
-        <Div id={AnchorsName.education}>
-          education
-        </Div>
-
-        <Div id={AnchorsName.projects}>
-          projects
-        </Div>
-
-        <Div id={AnchorsName.events}>
-          events
-        </Div>
-
-        <Div id={AnchorsName.articles}>
-          articles
-        </Div>
-
-        <Div id={AnchorsName.awards}>
-          awards
-        </Div>
-
-        <Div id={AnchorsName.skills}>
-          skills
-        </Div>
-
+        <Experience />
+        <Education />
+        <Projects />
+        <Events />
+        <Articles />
+        <Awards />
+        <Skills />
         {/* <footer id="footer"></footer> */}
       </React.Fragment>
     );

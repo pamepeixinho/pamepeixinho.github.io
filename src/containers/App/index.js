@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Grid from 'material-ui/Grid';
 
+import MainMenu from '../../components/MainMenu';
 import dimens from '../../assets/dimens';
-import Header from '../../components/Header';
+import About from '../../components/About';
 import Content from '../../containers/Content';
 
 const Wrapper = styled.div`
@@ -16,8 +18,13 @@ class App extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <Header />
-        <Content />
+      <Grid container justify="center">
+        <Grid item md={8}>
+          <MainMenu />
+          <About />
+          <Content />
+        </Grid>
+      </Grid>
       </Wrapper>
     );
   }
