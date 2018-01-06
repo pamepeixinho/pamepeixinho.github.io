@@ -1,7 +1,7 @@
 {
   "name": "pamela-peixinho-resume",
   "version": "1.0.0",
-  "homepage": "http://pamepeixinho.github.io",
+  "homepage": "https://pamepeixinho.github.io/resume/",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
