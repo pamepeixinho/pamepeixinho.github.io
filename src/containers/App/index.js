@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import MainMenu from '../../components/MainMenu';
 import dimens from '../../assets/dimens';
-import Header from '../../components/Header';
+import About from '../../components/About';
 import Content from '../../containers/Content';
 
 const Wrapper = styled.div`
@@ -16,7 +17,8 @@ class App extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <Header />
+        <MainMenu />
+        <About />
         <Content />
       </Wrapper>
     );

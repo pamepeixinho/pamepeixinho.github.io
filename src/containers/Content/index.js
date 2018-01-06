@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import MainMenu from '../../components/MainMenu';
 import AnchorsName from '../../constants';
 
 const Div = styled.div`
@@ -14,8 +13,6 @@ class Content extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
-        <MainMenu />
-
         <Div id={AnchorsName.experience}>
           experience
         </Div>
