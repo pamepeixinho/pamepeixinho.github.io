@@ -1,32 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../../logo.svg';
+import dimens from '../../assets/dimens';
+import Header from '../../components/Header';
+import Content from '../../containers/Content';
 
 const Wrapper = styled.div`
+  max-width: ${dimens.maxWidthGrid};
+  padding: ${dimens.sideSpacing};
   text-align: center;
+  margin: 0px auto;
 `;
 
-const Logo = styled.img`
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-`;
-class App extends Component {
+class App extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <header>
-          <Logo src={logo} alt="logo" />
-          <h1>Welcome to React</h1>
-        </header>
-        <p>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
+        <Content />
       </Wrapper>
     );
   }
