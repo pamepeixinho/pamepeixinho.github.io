@@ -42,17 +42,17 @@ class MainMenu extends React.PureComponent {
         <Anchor to={this.projects}>
           <FormattedMessage {...messages.projects} />
         </Anchor>
-        <Anchor to={this.articles}>
-          <FormattedMessage {...messages.articles} />
-        </Anchor>
         <Anchor to={this.awards}>
           <FormattedMessage {...messages.awards} />
         </Anchor>
-        <Anchor to={this.events}>
-          <FormattedMessage {...messages.events} />
+        <Anchor to={this.articles}>
+          <FormattedMessage {...messages.articles} />
         </Anchor>
         <Anchor to={this.skills}>
           <FormattedMessage {...messages.skills} />
+        </Anchor>
+        <Anchor to={this.events}>
+          <FormattedMessage {...messages.events} />
         </Anchor>
       </Wrapper>
     );
