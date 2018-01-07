@@ -3,13 +3,18 @@ import styled from 'styled-components';
 import Grid from 'material-ui/Grid';
 
 import MainMenu from '../../components/MainMenu';
-import dimens from '../../assets/dimens';
+import Dimens from '../../assets/dimens';
 import About from '../../components/About';
 import Content from '../../containers/Content';
 
 const Wrapper = styled.div`
-  max-width: ${dimens.maxWidthGrid};
-  padding: ${dimens.sideSpacing};
+  background-color: #F8F8F8;
+`;
+
+const ContentWrapper = styled.div`
+  background-color: white;
+  max-width: ${Dimens.maxWidthGrid};
+  padding: ${Dimens.sideSpacing};
   text-align: center;
   margin: 0px auto;
 `;
@@ -18,13 +23,15 @@ class App extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-      <Grid container justify="center">
-        <Grid item xs={12} md={8}>
-          <MainMenu />
-          <About />
-          <Content />
-        </Grid>
-      </Grid>
+        <ContentWrapper>
+          <Grid container justify="center">
+            <Grid item xs={12} md={8}>
+              <MainMenu />
+              <About />
+              <Content />
+            </Grid>
+          </Grid>
+        </ContentWrapper>
       </Wrapper>
     );
   }

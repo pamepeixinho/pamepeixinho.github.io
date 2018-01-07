@@ -31,6 +31,7 @@ class Education extends React.Component {
           startDate={feiStartDate}
           endDate={feiEndDate}
         />
+        <p>cursos</p>
       </Section>
     );
   }

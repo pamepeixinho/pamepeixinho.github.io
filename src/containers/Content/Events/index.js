@@ -8,7 +8,11 @@ class Events extends React.Component {
   render() {
     return (
       <Section title={globalMessages.events} id={AnchorsName.events} >
-        <p> teste </p>
+        <p>wvc?</p>
+        <p>sicfei</p>
+        <p>Inovafei?</p>
+        <p>react meetup</p>
+        <p>futuro = developers week</p>
       </Section>
     );
   }

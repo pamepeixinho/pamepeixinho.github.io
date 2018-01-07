@@ -8,7 +8,9 @@ class Projects extends React.Component {
   render() {
     return (
       <Section title={globalMessages.projects} id={AnchorsName.projects}>
-        <p> teste </p>
+        <p>IC</p>
+        <p>maratona</p>
+        <p>QuickSloth</p>
       </Section>
     );
   }
