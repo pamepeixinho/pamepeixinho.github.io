@@ -8,7 +8,8 @@ class Skills extends React.Component {
   render() {
     return (
       <Section title={globalMessages.skills} id={AnchorsName.skills}>
-        <p> teste </p>
+        <p> Languages </p>
+        <p> Theories/Metodologies </p>
       </Section>
     );
   }

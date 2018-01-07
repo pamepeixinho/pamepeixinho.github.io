@@ -8,7 +8,8 @@ class Awards extends React.Component {
   render() {
     return (
       <Section title={globalMessages.awards} id={AnchorsName.awards}>
-        <p> teste </p>
+        <p> inovafei </p>
+        <p> destaque academico 2017 </p>
       </Section>
     );
   }
