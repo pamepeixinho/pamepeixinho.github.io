@@ -15,10 +15,10 @@ class Content extends React.PureComponent {
         <Experience />
         <Education />
         <Projects />
-        <Events />
-        <Articles />
         <Awards />
+        <Articles />
         <Skills />
+        <Events />
         {/* <footer id="footer"></footer> */}
       </React.Fragment>
     );
