@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl, intlShape } from 'react-intl';
 
 import AnchorsName from '../../../constants';
 import Section from '../../../components/Section';
@@ -9,6 +10,25 @@ import globalMessages from '../../../messages';
 
 class Experience extends React.Component {
   render() {
+    const { intl } = this.props;
+
+    const sweStartDate = intl.formatDate(new Date(2017, 11), {
+      year: 'numeric',
+      month: 'long',
+    });
+
+    const sweEndDate = intl.formatMessage(messages.now);
+
+    const sweInternStartDate = intl.formatDate(new Date(2016, 5), {
+      year: 'numeric',
+      month: 'long',
+    });
+
+    const sweInternEndDate = intl.formatDate(new Date(2017, 11), {
+      year: 'numeric',
+      month: 'long',
+    });
+
     return (
       <Section
         id={AnchorsName.experience}
@@ -18,19 +38,23 @@ class Experience extends React.Component {
           title={messages.sweTitle}
           subtitle={messages.quintoAndar}
           description={messages.sweDescription}
-          startDate="date"
-          endDate="date"
+          startDate={sweStartDate}
+          endDate={sweEndDate}
         />
         <SummaryBox
           title={messages.sweInternTitle}
           subtitle={messages.quintoAndar}
           description={messages.sweInternDescription}
-          startDate="date"
-          endDate="date"
+          startDate={sweInternStartDate}
+          endDate={sweInternEndDate}
         />
       </Section>
     );
   }
 }
 
-export default Experience;
+Experience.propType = {
+  intl: intlShape.isRequired,
+};
+
+export default injectIntl(Experience);

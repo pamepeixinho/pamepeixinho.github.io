@@ -12,7 +12,7 @@ export default defineMessages({
   },
   sweDescription: {
     id: 'app.container.Content.Experience.sweDescription',
-    defaultMessage: 'In this position...',
+    defaultMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
   },
   sweInternTitle: {
     id: 'app.container.Content.Experience.sweInternTitle',
@@ -20,10 +20,14 @@ export default defineMessages({
   },
   sweInternDescription: {
     id: 'app.container.Content.Experience.sweInternDescription',
-    defaultMessage: 'In this position...',
+    defaultMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
   },
   quintoAndar: {
     id: 'app.container.Content.Experience.quintoAndar',
     defaultMessage: 'QuintoAndar',
+  },
+  now: {
+    id: 'app.container.Content.Experience.now',
+    defaultMessage: 'Present',
   },
 });
