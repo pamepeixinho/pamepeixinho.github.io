@@ -2,11 +2,12 @@ import React from 'react';
 
 import AnchorsName from '../../../constants';
 import Section from '../../../components/Section';
+import globalMessages from '../../../messages';
 
 class Articles extends React.Component {
   render() {
     return (
-      <Section title="Articles" id={AnchorsName.articles} >
+      <Section title={globalMessages.articles} id={AnchorsName.articles} >
         <p> teste </p>
       </Section>
     );

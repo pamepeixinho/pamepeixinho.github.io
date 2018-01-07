@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
-import Dimens from '../../assets/dimens';
 import Colors from '../../assets/colors';
-import ProfilePicture from '../../images/profilepicture.png';
-import RoundedPicture from '../../components/RoundedPicture';
+import MessagePropType from '../../utils/IntlProptype';
+import messages from './messages';
 
 const Title = styled.span`
   font-size: 18px;
@@ -14,6 +14,7 @@ const Title = styled.span`
 `;
 
 const Subtitle = styled.p`
+  display: block;
   font-size: 16px;
   font-weight: 600;
   color: ${Colors.lightGrey}
@@ -31,22 +32,38 @@ const DateDescription = styled.p`
 
 class SummaryBox extends React.PureComponent {
   render() {
+    const { startDate, endDate } = this.props;
     return (
-      <div>
-        <Title>{this.props.title}</Title>
-        <Subtitle>{this.props.subtitle}</Subtitle>
-        <Description>{this.props.description}</Description>
-        <DateDescription>{this.props.date}</DateDescription>
-      </div>
+      <React.Fragment>
+        <Title>
+          <FormattedMessage {...this.props.title} />
+        </Title>
+        <Subtitle>
+          <FormattedMessage {...this.props.subtitle} />
+        </Subtitle>
+        <Description>
+          <FormattedMessage {...this.props.description} />
+        </Description>
+        <DateDescription>
+          <FormattedMessage
+            {...messages.dateInterval}
+            values={{
+              startDate,
+              endDate,
+            }}
+          />
+        </DateDescription>
+      </React.Fragment>
     );
   }
 }
 
 SummaryBox.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  title: MessagePropType.isRequired,
+  subtitle: MessagePropType.isRequired,
+  description: MessagePropType.isRequired,
+  startDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string.isRequired,
 };
 
 export default SummaryBox;
