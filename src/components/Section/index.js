@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 import Colors from '../../assets/colors';
 import Dimens from '../../assets/dimens';
+import MessagePropType from '../../utils/IntlProptype';
 
 const LineSeparator = styled.div`
   margin-top: ${Dimens.defaultSpacing};
@@ -21,7 +23,9 @@ class Section extends React.Component {
   render() {
     return (
       <div id={this.props.id}>
-        <Title>{this.props.title}</Title>
+        <Title>
+          <FormattedMessage {...this.props.title} />
+        </Title>
         {this.props.children}
         <LineSeparator />
       </div>
@@ -31,7 +35,7 @@ class Section extends React.Component {
 
 Section.proptype = {
   id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: MessagePropType.isRequired,
   children: PropTypes.node.isRequired,
 };
 

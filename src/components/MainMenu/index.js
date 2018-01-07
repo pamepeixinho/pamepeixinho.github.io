@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scrollchor from 'react-scrollchor';
+import { FormattedMessage } from 'react-intl';
 
 import AnchorsName from '../../constants';
+import messages from '../../messages';
 
 const Anchor = styled(Scrollchor)`
   margin: 5px;
@@ -28,14 +30,30 @@ class MainMenu extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <Anchor to="">About</Anchor>
-        <Anchor to={this.experience}>Experience</Anchor>
-        <Anchor to={this.education}>Education</Anchor>
-        <Anchor to={this.projects}>Projects</Anchor>
-        <Anchor to={this.articles}>Articles</Anchor>
-        <Anchor to={this.awards}>Awards</Anchor>
-        <Anchor to={this.events}>Events</Anchor>
-        <Anchor to={this.skills}>Skills</Anchor>
+        <Anchor to="">
+          <FormattedMessage {...messages.about} />
+        </Anchor>
+        <Anchor to={this.experience}>
+          <FormattedMessage {...messages.experience} />
+        </Anchor>
+        <Anchor to={this.education}>
+          <FormattedMessage {...messages.education} />
+        </Anchor>
+        <Anchor to={this.projects}>
+          <FormattedMessage {...messages.projects} />
+        </Anchor>
+        <Anchor to={this.articles}>
+          <FormattedMessage {...messages.articles} />
+        </Anchor>
+        <Anchor to={this.awards}>
+          <FormattedMessage {...messages.awards} />
+        </Anchor>
+        <Anchor to={this.events}>
+          <FormattedMessage {...messages.events} />
+        </Anchor>
+        <Anchor to={this.skills}>
+          <FormattedMessage {...messages.skills} />
+        </Anchor>
       </Wrapper>
     );
   }
