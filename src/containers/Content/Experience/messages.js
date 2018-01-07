@@ -26,4 +26,8 @@ export default defineMessages({
     id: 'app.container.Content.Experience.quintoAndar',
     defaultMessage: 'QuintoAndar',
   },
+  now: {
+    id: 'app.container.Content.Experience.now',
+    defaultMessage: 'Present',
+  },
 });
