@@ -11,16 +11,19 @@ import globalMessages from '../../../messages';
 class Experience extends React.Component {
   render() {
     const { intl } = this.props;
+
     const sweStartDate = intl.formatDate(new Date(2017, 11), {
       year: 'numeric',
       month: 'long',
     });
+
     const sweEndDate = intl.formatMessage(messages.now);
 
     const sweInternStartDate = intl.formatDate(new Date(2016, 5), {
       year: 'numeric',
       month: 'long',
     });
+
     const sweInternEndDate = intl.formatDate(new Date(2017, 11), {
       year: 'numeric',
       month: 'long',
@@ -52,6 +55,6 @@ class Experience extends React.Component {
 
 Experience.propType = {
   intl: intlShape.isRequired,
-}
+};
 
 export default injectIntl(Experience);

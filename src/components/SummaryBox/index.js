@@ -5,6 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import Grid from 'material-ui/Grid';
 
 import Colors from '../../assets/colors';
+import Dimens from '../../assets/dimens';
 import MessagePropType from '../../utils/IntlProptype';
 import messages from './messages';
 
@@ -33,6 +34,7 @@ const DateDescription = styled.p`
 
 const Wrapper = styled(Grid)`
   text-align: left;
+  padding-bottom: ${Dimens.defaultSpacing};
 `;
 
 class SummaryBox extends React.PureComponent {
