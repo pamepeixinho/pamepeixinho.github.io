@@ -23,12 +23,8 @@ const BoldTitleName = TitleName.extend`
   color: ${Colors.primary};
 `;
 
-const ContentWrapper = styled.div`
-  margin-top: ${Dimens.defaultSpacing};
-`;
-
-const Description = ContentWrapper.extend`
-  margin: 20px auto 60px;
+const Description = styled.div`
+  margin: ${Dimens.defaultSpacing} auto;
   font-weight: 300;
   color: ${Colors.secondary};
 `;
@@ -42,10 +38,9 @@ class About extends React.PureComponent {
     return (
       <Wrapper>
         <ProfileRoundedPicture src={ProfilePicture} alt="profile picture" />
-        <ContentWrapper>
+        <div>
           <TitleName>Pamela</TitleName> <BoldTitleName>Peixinho</BoldTitleName>
-          {/* <p> pamelapeixinho@outlook.com / pameiupip@gmail.com </p> */}
-        </ContentWrapper>
+        </div>
         <Description>
           <FormattedMessage {...messages.miniDescription} />
         </Description>

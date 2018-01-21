@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   background-color: white;
   max-width: ${Dimens.maxWidthGrid};
-  padding: ${Dimens.sideSpacing};
+  padding: ${Dimens.defaultSpacing};
   text-align: center;
   margin: 0px auto;
 `;

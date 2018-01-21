@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Scrollchor from 'react-scrollchor';
 import { FormattedMessage } from 'react-intl';
 
+import Dimens from '../../assets/dimens';
 import AnchorsName from '../../constants';
 import messages from '../../messages';
 
@@ -20,7 +21,7 @@ const Anchor = styled(Scrollchor)`
 const Wrapper = styled.div`
   overflow: auto;
   padding: 5px;
-  margin-bottom: 60px;
+  margin-bottom: ${Dimens.boxSeparation};
 `;
 
 class MainMenu extends React.PureComponent {
