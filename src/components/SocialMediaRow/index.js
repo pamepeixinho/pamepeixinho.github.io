@@ -8,7 +8,7 @@ import { Facebook, Instagram, Linkedin, Twitter, Github } from '../../images/Soc
 
 
 const Wrapper = styled.div`
-  margin: ${dimens.defaultSpacing};
+  margin: ${dimens.defaultSpacing} ${dimens.defaultSpacing} 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;

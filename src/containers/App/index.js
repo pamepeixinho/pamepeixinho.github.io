@@ -9,6 +9,7 @@ import Content from '../../containers/Content';
 
 const Wrapper = styled.div`
   background-color: #F8F8F8;
+  color: #646464;
 `;
 
 const ContentWrapper = styled.div`
