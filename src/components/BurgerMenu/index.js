@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu'
 
 import MenuList from '../MenuList';

@@ -4,7 +4,6 @@ import Scrollchor from 'react-scrollchor';
 import { FormattedMessage } from 'react-intl';
 
 import Colors from '../../assets/colors';
-import Dimens from '../../assets/dimens';
 import AnchorsName from '../../constants';
 import messages from '../../messages';
 
