@@ -9,25 +9,8 @@ import withWidth from 'material-ui/utils/withWidth';
 import Colors from '../../assets/colors';
 import MessagePropType from '../../utils/IntlProptype';
 import messages from './messages';
+import SimpleDescriptionBox from '../SimpleDescriptionBox';
 
-const Title = styled.span`
-  font-size: 18px;
-  font-weight: 600;
-  color: ${Colors.grey}
-`;
-
-const Subtitle = styled.p`
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  color: ${Colors.lightGrey}
-`;
-
-const Description = styled.p`
-  font-weight: 300;
-  margin-bottom: 0;
-  color: ${Colors.grey}
-`;
 
 const DateDescription = styled.div`
   color: ${Colors.primary};
@@ -51,15 +34,11 @@ class SummaryBox extends React.PureComponent {
     return (
       <Wrapper container justify="center">
         <Grid item xs={12} sm={8}>
-          <Title>
-            <FormattedMessage {...this.props.title} />
-          </Title>
-          <Subtitle>
-            <FormattedMessage {...this.props.subtitle} />
-          </Subtitle>
-          <Description>
-            <FormattedMessage {...this.props.description} />
-          </Description>
+          <SimpleDescriptionBox 
+            title={this.props.title}
+            subtitle={this.props.subtitle}
+            description={this.props.description}
+          />
         </Grid>
         <NoPaddingGridItem xs={12} sm={4}>
           <DateDescription xsScreen={this.props.width === 'xs'}>
