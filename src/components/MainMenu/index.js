@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import Dimens from '../../assets/dimens';
 import AnchorsName from '../../constants';
 import messages from '../../messages';
+import MenuList from '../MenuList';
 
 const Anchor = styled(Scrollchor)`
   padding: 8px;
@@ -39,30 +40,7 @@ class MainMenu extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <Anchor to="">
-          <FormattedMessage {...messages.about} />
-        </Anchor>
-        <Anchor to={this.experience}>
-          <FormattedMessage {...messages.experience} />
-        </Anchor>
-        <Anchor to={this.education}>
-          <FormattedMessage {...messages.education} />
-        </Anchor>
-        <Anchor to={this.projects}>
-          <FormattedMessage {...messages.projects} />
-        </Anchor>
-        <Anchor to={this.awards}>
-          <FormattedMessage {...messages.awards} />
-        </Anchor>
-        <Anchor to={this.articles}>
-          <FormattedMessage {...messages.articles} />
-        </Anchor>
-        <Anchor to={this.skills}>
-          <FormattedMessage {...messages.skills} />
-        </Anchor>
-        <Anchor to={this.events}>
-          <FormattedMessage {...messages.events} />
-        </Anchor>
+        <MenuList />
       </Wrapper>
     );
   }
