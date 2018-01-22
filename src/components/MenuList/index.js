@@ -26,17 +26,22 @@ class MenuList extends React.PureComponent {
 
   goTo = (anchorName) => `#${anchorName}`
 
+  renderMenuList = (link) => {
+    const goToAnchor = this.goTo(AnchorsName[link.key])
+    return (
+      <Wrapper key={link.key} onClick={this.props.onClick}>
+        <Anchor
+          to={goToAnchor}
+          {...this.props}>
+          <FormattedMessage {...link.message} />
+        </Anchor>
+      </Wrapper>
+    );
+  }
+
   render() {
     return (
-      MenuLinks.map((link) =>
-        <Wrapper key={link.key} onClick={this.props.onClick}>
-          <Anchor
-            to={this.goTo(AnchorsName[link.key])}
-            {...this.props}>
-            <FormattedMessage {...link.message} />
-          </Anchor>
-        </Wrapper>
-      )
+      MenuLinks.map((link) => this.renderMenuList(link))
     );
   }
 }
