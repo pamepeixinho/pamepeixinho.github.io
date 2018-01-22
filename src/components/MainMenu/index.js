@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Scrollchor from 'react-scrollchor';
 import { FormattedMessage } from 'react-intl';
@@ -37,35 +38,44 @@ class MainMenu extends React.PureComponent {
   skills = this.goTo(AnchorsName.skills)
 
   render() {
+    // TODO: DRY
     return (
       <Wrapper>
-        <Anchor to="">
+        <Anchor id="about" to="" className={this.props.defaultClassName}>
           <FormattedMessage {...messages.about} />
         </Anchor>
-        <Anchor to={this.experience}>
+        <Anchor id="experience" to={this.experience} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.experience} />
         </Anchor>
-        <Anchor to={this.education}>
+        <Anchor id="education" to={this.education} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.education} />
         </Anchor>
-        <Anchor to={this.projects}>
+        <Anchor id="projects" to={this.projects} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.projects} />
         </Anchor>
-        <Anchor to={this.awards}>
+        <Anchor id="awards" to={this.awards} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.awards} />
         </Anchor>
-        <Anchor to={this.articles}>
+        <Anchor id="articles" to={this.articles} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.articles} />
         </Anchor>
-        <Anchor to={this.skills}>
+        <Anchor id="skills" to={this.skills} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.skills} />
         </Anchor>
-        <Anchor to={this.events}>
+        <Anchor id="events" to={this.events} className={this.props.defaultClassName}>
           <FormattedMessage {...messages.events} />
         </Anchor>
       </Wrapper>
     );
   }
 }
+
+MainMenu.propTypes = {
+  defaultClassName: PropTypes.string,
+};
+
+MainMenu.defaultProps = {
+  defaultClassName: '',
+};
 
 export default MainMenu;
