@@ -7,7 +7,6 @@ import Grid from 'material-ui/Grid';
 import withWidth from 'material-ui/utils/withWidth';
 
 import Colors from '../../assets/colors';
-import Dimens from '../../assets/dimens';
 import MessagePropType from '../../utils/IntlProptype';
 import messages from './messages';
 
