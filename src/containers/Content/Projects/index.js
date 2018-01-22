@@ -22,14 +22,14 @@ class Projects extends React.Component {
             description={messages.icDescription}
           />
           <ProjectBox
-            title={messages.icTitle}
-            subtitle={messages.icSubtitle}
-            description={messages.icDescription}
+            title={messages.marathonTitle}
+            subtitle={messages.marathonSubtitle}
+            description={messages.marathonDescription}
           />
           <ProjectBox
-            title={messages.icTitle}
-            subtitle={messages.icSubtitle}
-            description={messages.icDescription}
+            title={messages.quickslothTitle}
+            subtitle={messages.quickslothSubtitle}
+            description={messages.quickslothDescription}
           />
         </Grid>
       </Section>
