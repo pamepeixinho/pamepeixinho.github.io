@@ -13,9 +13,6 @@ class Projects extends React.Component {
     return (
       <Section title={globalMessages.projects} id={AnchorsName.projects}>
         <Grid container justify="center">
-        {/* <p>IC</p>
-        <p>maratona</p>
-        <p>QuickSloth</p> */}
           <ProjectBox
             title={messages.icTitle}
             subtitle={messages.icSubtitle}

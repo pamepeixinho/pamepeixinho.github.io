@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Grid from 'material-ui/Grid';
+import Hidden from 'material-ui/Hidden';
 
 import MainMenu from '../../components/MainMenu';
+import BurguerMenu from '../../components/BurgerMenu';
 import Dimens from '../../assets/dimens';
 import About from '../../components/About';
 import Content from '../../containers/Content';
@@ -27,7 +30,12 @@ class App extends React.PureComponent {
         <ContentWrapper>
           <Grid container justify="center">
             <Grid item xs={12} sm={10} md={8}>
-              <MainMenu />
+              <Hidden mdUp>
+                <BurguerMenu />
+              </Hidden>
+              <Hidden smDown>
+                <MainMenu />
+              </Hidden>
               <About />
               <Content />
             </Grid>

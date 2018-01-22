@@ -1,4 +1,5 @@
 export const AnchorsName = {
+  about: '',
   experience: 'experience',
   education: 'education',
   projects: 'projects',
