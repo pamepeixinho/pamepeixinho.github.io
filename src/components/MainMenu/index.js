@@ -14,7 +14,7 @@ class MainMenu extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <MenuList />
+        <MenuList data-side-menu={false} />
       </Wrapper>
     );
   }
