@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Scrollchor from 'react-scrollchor';
 import { FormattedMessage } from 'react-intl';
 
+import Colors from '../../assets/colors';
 import Dimens from '../../assets/dimens';
 import AnchorsName from '../../constants';
 import messages from '../../messages';
@@ -10,7 +11,7 @@ import messages from '../../messages';
 const Anchor = styled(Scrollchor)`
   padding: 8px;
   text-decoration: none;
-  color: #646464;
+  color: ${({ sideMenu }) => sideMenu ? Colors.lightGrey : Colors.grey};
   font-weight: 300;
   &:hover {
     color: #2B3034;
@@ -32,28 +33,28 @@ class MenuList extends React.PureComponent {
 
   render() {
     return (
-        [<Anchor to="">
+        [<Anchor to="" {...this.props}>
           <FormattedMessage {...messages.about} />
         </Anchor>,
-        <Anchor to={this.experience}>
+        <Anchor to={this.experience} {...this.props}>
           <FormattedMessage {...messages.experience} />
         </Anchor>,
-        <Anchor to={this.education}>
+        <Anchor to={this.education} {...this.props}>
           <FormattedMessage {...messages.education} />
         </Anchor>,
-        <Anchor to={this.projects}>
+        <Anchor to={this.projects} {...this.props}>
           <FormattedMessage {...messages.projects} />
         </Anchor>,
-        <Anchor to={this.awards}>
+        <Anchor to={this.awards} {...this.props}>
           <FormattedMessage {...messages.awards} />
         </Anchor>,
-        <Anchor to={this.articles}>
+        <Anchor to={this.articles} {...this.props}>
           <FormattedMessage {...messages.articles} />
         </Anchor>,
-        <Anchor to={this.skills}>
+        <Anchor to={this.skills} {...this.props}>
           <FormattedMessage {...messages.skills} />
         </Anchor>,
-        <Anchor to={this.events}>
+        <Anchor to={this.events} {...this.props}>
           <FormattedMessage {...messages.events} />
         </Anchor>]
     );

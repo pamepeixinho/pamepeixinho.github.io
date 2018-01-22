@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu'
 
 import MenuList from '../MenuList';
+import Colors from '../../assets/colors';
 
 var styles = {
   bmBurgerButton: {
@@ -30,7 +31,7 @@ var styles = {
     background: '#bdc3c7',
   },
   bmMenu: {
-    background: '#373a47',
+    background: Colors.grey,
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
   },
@@ -55,7 +56,7 @@ class BurguerMenu extends React.PureComponent {
   render() {
     return (
       <Menu styles={styles}>
-        <MenuList />
+        <MenuList sideMenu />
       </Menu>
     );
   }
