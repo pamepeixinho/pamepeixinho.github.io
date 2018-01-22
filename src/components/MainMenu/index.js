@@ -3,16 +3,25 @@ import styled from 'styled-components';
 import Scrollchor from 'react-scrollchor';
 import { FormattedMessage } from 'react-intl';
 
+import Dimens from '../../assets/dimens';
 import AnchorsName from '../../constants';
 import messages from '../../messages';
 
 const Anchor = styled(Scrollchor)`
-  margin: 5px;
+  padding: 8px;
+  text-decoration: none;
+  color: #646464;
+  font-weight: 300;
+  &:hover {
+    color: #2B3034;
+    text-decoration: underline;
+  }
 `;
 
 const Wrapper = styled.div`
   overflow: auto;
   padding: 5px;
+  margin-bottom: ${Dimens.boxSeparation};
 `;
 
 class MainMenu extends React.PureComponent {

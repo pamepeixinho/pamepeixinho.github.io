@@ -12,12 +12,12 @@ class Education extends React.Component {
     const { intl } = this.props;
     const feiStartDate = intl.formatDate(new Date(2014, 1), {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
     });
 
     const feiEndDate = intl.formatDate(new Date(2017, 11), {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
     });
 
     return (
@@ -31,7 +31,7 @@ class Education extends React.Component {
           startDate={feiStartDate}
           endDate={feiEndDate}
         />
-        <p>cursos</p>
+        {/* TODO: add courses here */}
       </Section>
     );
   }

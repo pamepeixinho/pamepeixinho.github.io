@@ -14,19 +14,19 @@ class Experience extends React.Component {
 
     const sweStartDate = intl.formatDate(new Date(2017, 11), {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
     });
 
     const sweEndDate = intl.formatMessage(messages.now);
 
     const sweInternStartDate = intl.formatDate(new Date(2016, 5), {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
     });
 
     const sweInternEndDate = intl.formatDate(new Date(2017, 11), {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
     });
 
     return (

@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import dimens from '../../assets/dimens';
+import Dimens from '../../assets/dimens';
 import SocialLink from '../SocialLink';
 import { SocialLinks } from '../../constants';
 import { Facebook, Instagram, Linkedin, Twitter, Github } from '../../images/SocialMedia';
 
 
 const Wrapper = styled.div`
-  margin: ${dimens.defaultSpacing};
+  margin: ${Dimens.defaultSpacing} ${Dimens.defaultSpacing} ${Dimens.boxSeparation};
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -9,12 +9,13 @@ import Content from '../../containers/Content';
 
 const Wrapper = styled.div`
   background-color: #F8F8F8;
+  color: #646464;
 `;
 
 const ContentWrapper = styled.div`
   background-color: white;
   max-width: ${Dimens.maxWidthGrid};
-  padding: ${Dimens.sideSpacing};
+  padding: ${Dimens.defaultSpacing};
   text-align: center;
   margin: 0px auto;
 `;
@@ -25,7 +26,7 @@ class App extends React.PureComponent {
       <Wrapper>
         <ContentWrapper>
           <Grid container justify="center">
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} sm={10} md={8}>
               <MainMenu />
               <About />
               <Content />

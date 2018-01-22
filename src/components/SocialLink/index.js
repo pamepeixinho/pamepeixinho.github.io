@@ -5,6 +5,9 @@ import styled from 'styled-components';
 const Link = styled.a`
   text-decoration: none;
   padding: 5px;
+  &:hover {
+    filter: contrast(2);
+  }
 `;
 
 const Img = styled.img`

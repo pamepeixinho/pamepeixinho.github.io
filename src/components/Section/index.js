@@ -17,18 +17,23 @@ const Title = styled.p`
   font-weight: 600;
   font-size: 20px;
   color: ${Colors.primary};
+  margin-bottom: ${Dimens.boxSeparation};
+`;
+
+const Wrapper = styled.div`
+  margin-bottom: ${Dimens.defaultSpacing};
 `;
 
 class Section extends React.Component {
   render() {
     return (
-      <div id={this.props.id}>
+      <Wrapper id={this.props.id}>
         <Title>
           <FormattedMessage {...this.props.title} />
         </Title>
         {this.props.children}
         <LineSeparator />
-      </div>
+      </Wrapper>
     );
   }
 }

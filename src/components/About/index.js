@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 import Dimens from '../../assets/dimens';
 import Colors from '../../assets/colors';
 import ProfilePicture from '../../images/profilepicture.png';
 import RoundedPicture from '../../components/RoundedPicture';
 import SocialMediaRow from '../../components/SocialMediaRow';
+import messages from './messages';
 
 const ProfileRoundedPicture = RoundedPicture.extend`
   width: 120px;
@@ -21,12 +23,8 @@ const BoldTitleName = TitleName.extend`
   color: ${Colors.primary};
 `;
 
-const ContentWrapper = styled.div`
-  margin-top: ${Dimens.defaultSpacing};
-`;
-
-const Description = ContentWrapper.extend`
-  margin: 0 auto;
+const Description = styled.div`
+  margin: ${Dimens.defaultSpacing} auto;
   font-weight: 300;
   color: ${Colors.secondary};
 `;
@@ -40,14 +38,11 @@ class About extends React.PureComponent {
     return (
       <Wrapper>
         <ProfileRoundedPicture src={ProfilePicture} alt="profile picture" />
-        <ContentWrapper>
+        <div>
           <TitleName>Pamela</TitleName> <BoldTitleName>Peixinho</BoldTitleName>
-          <p> pamelapeixinho@outlook.com / pameiupip@gmail.com </p>
-        </ContentWrapper>
+        </div>
         <Description>
-          <p>
-          I am a Software Engineer at startup QuintoAndar, developing apps for iOS, Android, Web application, Restful backends, a little of machine learning. I have finished BS in Computer Science at FEI
-          </p>
+          <FormattedMessage {...messages.miniDescription} />
         </Description>
         <SocialMediaRow />
       </Wrapper>
