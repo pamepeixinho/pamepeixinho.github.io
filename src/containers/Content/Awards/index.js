@@ -16,12 +16,14 @@ class Awards extends React.Component {
       <Section title={globalMessages.awards} id={AnchorsName.awards}>
         <Grid container justify="center">
           <DescriptionBorderBox
+            threeColumn={false}
             imageSrc={FeiInnovationImg}
             title={messages.feiInnovationTitle}
             subtitle={messages.feiInnovationSubtitle}
             description={messages.feiInnovationDescription}
           />
           <DescriptionBorderBox
+            threeColumn={false}
             imageSrc={AcademicHighlightImg}
             title={messages.academicHighlightTitle}
             subtitle={messages.academicHighlightSubtitle}

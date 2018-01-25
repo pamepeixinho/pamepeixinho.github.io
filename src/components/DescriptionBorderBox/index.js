@@ -20,30 +20,40 @@ const Wrapper = styled.div`
 const Image = styled.img`
   padding: 1px;
   width: 100%;
-  height: 30%;
+  height: 50%;
 `;
 
 const ContentWrapper = styled.div`
   padding: 16px;
 `;
 
+const GridItem = styled(Grid)`
+  margin-bottom: 20px !important;
+`;
+
 class DescriptionBorderBox extends React.PureComponent {
   render() {
     const { imageSrc } = this.props;
+    const gridProps = {
+      item: true,
+      xs: 10,
+      sm: this.props.threeColumn ? 4 : 6,
+    };
+
     return (
-      <Grid item xs={10} sm={4}>
-        <Wrapper>
-          {imageSrc && <Image src={imageSrc}/>}
-          <ContentWrapper>
-            <SimpleDescriptionBox 
-              title={this.props.title}
-              subtitle={this.props.subtitle}
-              description={this.props.description}
-            />
-            {this.props.children}
-          </ContentWrapper>
-        </Wrapper>
-      </Grid>
+        <GridItem {...gridProps}>
+          <Wrapper>
+            {imageSrc && <Image src={imageSrc}/>}
+            <ContentWrapper>
+              <SimpleDescriptionBox 
+                title={this.props.title}
+                subtitle={this.props.subtitle}
+                description={this.props.description}
+              />
+              {this.props.children}
+            </ContentWrapper>
+          </Wrapper>
+        </GridItem>
     );
   }
 }
@@ -57,6 +67,11 @@ DescriptionBorderBox.propTypes = {
   subtitle: MessagePropType.isRequired,
   description: MessagePropType.isRequired,
   imageSrc: PropTypes.node,
+  threeColumn: PropTypes.bool,
+};
+
+DescriptionBorderBox.defaultProps = {
+  threeColumn: true,
 };
 
 export default DescriptionBorderBox;
