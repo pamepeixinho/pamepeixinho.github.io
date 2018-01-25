@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import { IntlProvider } from 'react-intl';
 
 import './globalStyle.css';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(
+render(
   <IntlProvider locale="en">
     <App />
   </IntlProvider>,
