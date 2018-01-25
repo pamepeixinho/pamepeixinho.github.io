@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   height: calc(100% - 16px);
 `;
 
-class ProjectBox extends React.PureComponent {
+class DescriptionBorderBox extends React.PureComponent {
   render() {
     return (
       <Grid item xs={10} sm={4}>
@@ -33,7 +33,7 @@ class ProjectBox extends React.PureComponent {
   }
 }
 
-ProjectBox.propTypes = {
+DescriptionBorderBox.propTypes = {
   children: PropTypes.oneOf([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
@@ -43,4 +43,4 @@ ProjectBox.propTypes = {
   description: MessagePropType.isRequired,
 };
 
-export default ProjectBox;
+export default DescriptionBorderBox;
