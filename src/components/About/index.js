@@ -11,6 +11,9 @@ import messages from './messages';
 
 const ProfileRoundedPicture = RoundedPicture.extend`
   width: 120px;
+  @media (max-width: 960px) {
+    margin-top: 32px;
+  }
 `;
 
 const TitleName = styled.span`
