@@ -19,7 +19,7 @@ const DateDescription = styled.div`
 
 const Wrapper = styled(Grid)`
   text-align: left;
-  padding-bottom: 40px;
+  padding-bottom: 32px;
 `;
 
 const NoPaddingGridItem = styled(Grid).attrs({

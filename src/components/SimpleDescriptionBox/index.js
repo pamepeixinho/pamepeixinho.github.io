@@ -8,20 +8,20 @@ import MessagePropType from '../../utils/IntlProptype';
 const Title = styled.span`
   font-size: 18px;
   font-weight: 600;
-  color: ${Colors.grey}
+  color: ${Colors.grey};
 `;
 
 const Subtitle = styled.p`
   display: block;
   font-size: 16px;
   font-weight: 600;
-  color: ${Colors.lightGrey}
+  color: ${Colors.lightGrey};
 `;
 
 const Description = styled.p`
   font-weight: 300;
   margin-bottom: 0;
-  color: ${Colors.grey}
+  color: ${Colors.grey};
 `;
 
 class SimpleDescriptionBox extends React.PureComponent {

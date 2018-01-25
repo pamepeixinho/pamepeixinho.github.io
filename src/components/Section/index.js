@@ -8,7 +8,7 @@ import Dimens from '../../assets/dimens';
 import MessagePropType from '../../utils/IntlProptype';
 
 const LineSeparator = styled.div`
-  margin-top: ${Dimens.defaultSpacing};
+  margin: 26px 0;
   height: 1px;
   background-color: ${`${Colors.secondary}5c`};
 `;
@@ -17,23 +17,19 @@ const Title = styled.p`
   font-weight: 600;
   font-size: 20px;
   color: ${Colors.primary};
-  margin-bottom: ${Dimens.boxSeparation};
-`;
-
-const Wrapper = styled.div`
   margin-bottom: ${Dimens.defaultSpacing};
 `;
 
 class Section extends React.Component {
   render() {
     return (
-      <Wrapper id={this.props.id}>
+      <div id={this.props.id}>
         <Title>
           <FormattedMessage {...this.props.title} />
         </Title>
         {this.props.children}
         <LineSeparator />
-      </Wrapper>
+      </div>
     );
   }
 }
