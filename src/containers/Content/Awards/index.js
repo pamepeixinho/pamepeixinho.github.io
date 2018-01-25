@@ -1,15 +1,35 @@
 import React from 'react';
 
-import AnchorsName from '../../../constants';
+import Grid from 'material-ui/Grid';
+
 import Section from '../../../components/Section';
+import DescriptionBorderBox from '../../../components/DescriptionBorderBox';
+import AnchorsName from '../../../constants';
 import globalMessages from '../../../messages';
+import FeiInnovationImg from '../../../images/feiInnovation2017.jpg';
+import AcademicHighlightImg from '../../../images/academicHighlight2017.jpg';
+import messages from './messages';
 
 class Awards extends React.Component {
   render() {
     return (
       <Section title={globalMessages.awards} id={AnchorsName.awards}>
-        <p> inovafei </p>
-        <p> destaque academico 2017 </p>
+        <Grid container justify="center">
+          <DescriptionBorderBox
+            threeColumn={false}
+            imageSrc={FeiInnovationImg}
+            title={messages.feiInnovationTitle}
+            subtitle={messages.feiInnovationSubtitle}
+            description={messages.feiInnovationDescription}
+          />
+          <DescriptionBorderBox
+            threeColumn={false}
+            imageSrc={AcademicHighlightImg}
+            title={messages.academicHighlightTitle}
+            subtitle={messages.academicHighlightSubtitle}
+            description={messages.academicHighlightDescription}
+          />
+        </Grid>
       </Section>
     );
   }
