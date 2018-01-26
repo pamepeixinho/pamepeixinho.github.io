@@ -19,7 +19,6 @@ class Content extends React.PureComponent {
         <Articles />
         <Events />
         <Skills />
-        {/* <footer id="footer"></footer> */}
       </React.Fragment>
     );
   }

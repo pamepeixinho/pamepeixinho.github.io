@@ -15,11 +15,14 @@ const Description = styled.p`
 
 class SimpleDescriptionBox extends React.PureComponent {
   render() {
+    const { title } = this.props;
     return (
       <div>
-        <Title>
-          <FormattedMessage {...this.props.title} />
-        </Title>
+        {title && 
+          <Title>
+            <FormattedMessage {...title} />
+          </Title>
+        }
         <Subtitle>
           <FormattedMessage {...this.props.subtitle} />
         </Subtitle>
@@ -32,7 +35,7 @@ class SimpleDescriptionBox extends React.PureComponent {
 }
 
 SimpleDescriptionBox.propTypes = {
-  title: MessagePropType.isRequired,
+  title: MessagePropType,
   subtitle: MessagePropType.isRequired,
   description: MessagePropType.isRequired,
 };
