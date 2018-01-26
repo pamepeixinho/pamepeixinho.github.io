@@ -42,13 +42,17 @@ class SummaryBox extends React.PureComponent {
         </Grid>
         <NoPaddingGridItem xs={12} sm={4}>
           <DateDescription xsScreen={this.props.width === 'xs'}>
-            <FormattedMessage
-              {...messages.dateInterval}
-              values={{
-                startDate,
-                endDate,
-              }}
-            />
+            { !endDate ?
+              <p>{startDate}</p>
+              :
+              <FormattedMessage
+                {...messages.dateInterval}
+                values={{
+                  startDate,
+                  endDate,
+                }}
+              />
+            }
           </DateDescription>
         </NoPaddingGridItem>
       </Wrapper>
@@ -62,7 +66,7 @@ SummaryBox.propTypes = {
   subtitle: MessagePropType.isRequired,
   description: MessagePropType.isRequired,
   startDate: PropTypes.string.isRequired,
-  endDate: PropTypes.string.isRequired,
+  endDate: PropTypes.string,
 };
 
 export default withWidth()(SummaryBox);
