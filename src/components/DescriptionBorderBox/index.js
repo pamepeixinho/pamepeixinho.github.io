@@ -15,12 +15,10 @@ const Wrapper = styled.div`
   margin-bottom: 40px;
   height: calc(100% - 16px);
 `;
-// TODO: props custom height
 
 const Image = styled.img`
-  padding: 1px;
+  border-radius: 2px 2px 0 0;
   width: 100%;
-  height: 50%;
 `;
 
 const ContentWrapper = styled.div`
