@@ -4,20 +4,14 @@ import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 
 import AnchorsName from '../../../constants';
 import Section from '../../../components/Section';
-import Title from '../../../components/Title';
 import SummaryBox from '../../../components/SummaryBox';
+import SectionSubtitle from '../../../components/SectionSubtitle';
 import globalMessages from '../../../messages';
 import messages from './messages';
 
 const LeftAlign = styled.div`
   text-align: left;
 `;
-
-const SectionSubtitles = Title.extend`
-  text-decoration: underline;
-  margin-bottom: 8px;
-`.withComponent('div');
-
 
 class Events extends React.Component {
   render() {
@@ -34,9 +28,9 @@ class Events extends React.Component {
         <p>react meetup</p>
         <p>futuro = developers week</p> */}
         <LeftAlign>
-          <SectionSubtitles>
+          <SectionSubtitle>
             <FormattedMessage {...messages.speaker} />
-          </SectionSubtitles>
+          </SectionSubtitle>
           <SummaryBox
             subtitle={messages.grupySp}
             description={messages.grupySpDescription}
@@ -55,9 +49,9 @@ class Events extends React.Component {
         </LeftAlign>
 
         <LeftAlign>
-          <SectionSubtitles>
+          <SectionSubtitle>
             <FormattedMessage {...messages.attendee} />
-          </SectionSubtitles>
+          </SectionSubtitle>
           <SummaryBox
             subtitle={messages.grupySp}
             description={messages.grupySpDescription}

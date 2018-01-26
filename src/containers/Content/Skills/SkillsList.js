@@ -1,0 +1,27 @@
+export default {
+  programmingLanguagesTools: [
+    'Java',
+    'Javascript',
+    'Python',
+    'React',
+    'Redux',
+    'Swift',
+    'GIT',
+    'Html5',
+    'Css3',
+    'Unit Test',
+    'C',
+    'C++',
+    'MySQL',
+    'iOS apps',
+    'Android',
+    'Objective-c',
+    'Machine Learning',
+  ],
+  workflow: [
+    'Mobile-First',
+    'Responsive Design',
+    'Agile Development',
+    'Scrum',
+  ],
+};
