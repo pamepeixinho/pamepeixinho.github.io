@@ -27,11 +27,11 @@ export default [
     message: messages.articles,
   },
   {
-    key: 'skills',
-    message: messages.skills,
-  },
-  {
     key: 'events',
     message: messages.events,
+  },
+  {
+    key: 'skills',
+    message: messages.skills,
   },
 ];

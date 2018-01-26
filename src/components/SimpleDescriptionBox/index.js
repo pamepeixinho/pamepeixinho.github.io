@@ -4,19 +4,8 @@ import { FormattedMessage } from 'react-intl';
 
 import Colors from '../../assets/colors';
 import MessagePropType from '../../utils/IntlProptype';
-
-const Title = styled.span`
-  font-size: 18px;
-  font-weight: 600;
-  color: ${Colors.grey};
-`;
-
-const Subtitle = styled.p`
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  color: ${Colors.lightGrey};
-`;
+import Title from '../Title';
+import Subtitle from '../Subtitle';
 
 const Description = styled.p`
   font-weight: 300;
