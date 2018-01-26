@@ -62,7 +62,7 @@ class SummaryBox extends React.PureComponent {
 
 SummaryBox.propTypes = {
   width: PropTypes.string,
-  title: MessagePropType.isRequired,
+  title: MessagePropType,
   subtitle: MessagePropType.isRequired,
   description: MessagePropType.isRequired,
   startDate: PropTypes.string.isRequired,
