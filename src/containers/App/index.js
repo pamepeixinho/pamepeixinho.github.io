@@ -27,12 +27,12 @@ class App extends React.PureComponent {
   render() {
     return (
       <Wrapper>
+        <Hidden mdUp>
+          <BurguerMenu />
+        </Hidden>
         <ContentWrapper>
           <Grid container justify="center">
             <Grid item xs={12} sm={10} md={8}>
-              <Hidden mdUp>
-                <BurguerMenu />
-              </Hidden>
               <Hidden smDown>
                 <MainMenu />
               </Hidden>

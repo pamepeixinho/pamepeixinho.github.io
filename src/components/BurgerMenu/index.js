@@ -1,16 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu'
 
 import MenuList from '../MenuList';
 import Colors from '../../assets/colors';
 
-var styles = {
+const styles = {
   bmBurgerButton: {
     position: 'fixed',
     width: '24px',
     height: '20px',
-    left: '36px',
-    top: '36px',
+    left: '32px',
+    top: '18px',
   },
   bmMenuWrap: {
     left: '0px',
@@ -49,6 +50,15 @@ var styles = {
   }
 }
 
+const Wrapper = styled.div`
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  height: 56px;
+  top: 0;
+  left: 0;
+`;
+
 
 class BurguerMenu extends React.PureComponent {
   constructor (props) {
@@ -72,13 +82,15 @@ class BurguerMenu extends React.PureComponent {
 
   render() {
     return (
-      <Menu
-        width={ 256 }
-        styles={styles}
-        isOpen={this.state.menuOpen}
-        onStateChange={this.handleStateChange}>
-        <MenuList data-side-menu onClick={this.closeMenu} />
-      </Menu>
+      <Wrapper>
+        <Menu
+          width={ 256 }
+          styles={styles}
+          isOpen={this.state.menuOpen}
+          onStateChange={this.handleStateChange}>
+          <MenuList data-side-menu onClick={this.closeMenu} />
+        </Menu>
+      </Wrapper>
     );
   }
 }

@@ -32,6 +32,7 @@ class MenuList extends React.PureComponent {
       <Wrapper key={link.key} onClick={this.props.onClick}>
         <Anchor
           to={goToAnchor}
+          animate={{ offset: 20, duration: 600 }}
           {...this.props}>
           <FormattedMessage {...link.message} />
         </Anchor>
