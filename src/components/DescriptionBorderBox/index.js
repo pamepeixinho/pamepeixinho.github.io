@@ -28,10 +28,13 @@ const ContentWrapper = styled.div`
 const GridItem = styled(Grid)`
   margin-bottom: 20px !important;
 `;
+const DateDescription = styled.div`
+  color: ${Colors.primary};
+`;
 
 class DescriptionBorderBox extends React.PureComponent {
   render() {
-    const { imageSrc } = this.props;
+    const { imageSrc, date } = this.props;
     const gridProps = {
       item: true,
       xs: 10,
@@ -48,6 +51,7 @@ class DescriptionBorderBox extends React.PureComponent {
                 subtitle={this.props.subtitle}
                 description={this.props.description}
               />
+              {date && <DateDescription> { date } </DateDescription>}
               {this.props.children}
             </ContentWrapper>
           </Wrapper>
