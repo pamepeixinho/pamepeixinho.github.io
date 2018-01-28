@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 
@@ -14,6 +15,14 @@ const Description = styled.p`
 `;
 
 class SimpleDescriptionBox extends React.PureComponent {
+  renderBullets = (bullet) => {
+    return (
+      <li>
+        <FormattedMessage {...bullet} />
+      </li>
+    );
+  }
+
   render() {
     const { title } = this.props;
     return (
@@ -28,6 +37,9 @@ class SimpleDescriptionBox extends React.PureComponent {
         </Subtitle>
         <Description>
           <FormattedMessage {...this.props.description} />
+          <ul>
+            {this.props.descriptionBullets.map((bullet) => this.renderBullets(bullet))}
+          </ul>
         </Description>
       </div>
     );
@@ -38,6 +50,11 @@ SimpleDescriptionBox.propTypes = {
   title: MessagePropType,
   subtitle: MessagePropType.isRequired,
   description: MessagePropType.isRequired,
+  descriptionBullets: PropTypes.arrayOf(MessagePropType),
+};
+
+SimpleDescriptionBox.defaultProps = {
+  descriptionBullets: [],
 };
 
 export default SimpleDescriptionBox;

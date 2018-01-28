@@ -38,6 +38,7 @@ class SummaryBox extends React.PureComponent {
             title={this.props.title}
             subtitle={this.props.subtitle}
             description={this.props.description}
+            descriptionBullets={this.props.descriptionBullets}
           />
         </Grid>
         <NoPaddingGridItem xs={12} sm={4}>
@@ -67,6 +68,7 @@ SummaryBox.propTypes = {
   description: MessagePropType.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string,
+  descriptionBullets: PropTypes.arrayOf(MessagePropType),
 };
 
 export default withWidth()(SummaryBox);
