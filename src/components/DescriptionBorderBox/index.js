@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   border: 1px solid ${Colors.lightGrey};
   border-radius: 4px;
   margin-bottom: 40px;
-  height: calc(100% - 16px);
+  height: calc(100% - 32px);
 `;
 
 const Image = styled.img`
@@ -22,7 +22,7 @@ const Image = styled.img`
 `;
 
 const ContentWrapper = styled.div`
-  padding: 16px;
+  padding: 12px;
 `;
 
 const GridItem = styled(Grid)`

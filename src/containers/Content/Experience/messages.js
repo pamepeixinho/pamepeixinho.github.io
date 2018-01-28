@@ -12,7 +12,7 @@ export default defineMessages({
   },
   sweDescription: {
     id: 'app.container.Content.Experience.sweDescription',
-    defaultMessage: 'lorem',
+    defaultMessage: '   ',
   },
   sweInternTitle: {
     id: 'app.container.Content.Experience.sweInternTitle',
