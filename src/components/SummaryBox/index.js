@@ -31,18 +31,24 @@ const NoPaddingGridItem = styled(Grid).attrs({
 class SummaryBox extends React.PureComponent {
   render() {
     const { startDate, endDate } = this.props;
+    const hasDateInterval = endDate !== undefined;
+
+    const descriptionGridDesktop = hasDateInterval ? 8 : 10;
+    const dateGridDesktop = hasDateInterval ? 4 : 2;
+
     return (
       <Wrapper container justify="center">
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={descriptionGridDesktop}>
           <SimpleDescriptionBox 
             title={this.props.title}
             subtitle={this.props.subtitle}
             description={this.props.description}
+            descriptionBullets={this.props.descriptionBullets}
           />
         </Grid>
-        <NoPaddingGridItem xs={12} sm={4}>
+        <NoPaddingGridItem xs={12} sm={dateGridDesktop}>
           <DateDescription xsScreen={this.props.width === 'xs'}>
-            { !endDate ?
+            { !hasDateInterval ?
               <p>{startDate}</p>
               :
               <FormattedMessage
@@ -67,6 +73,7 @@ SummaryBox.propTypes = {
   description: MessagePropType.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string,
+  descriptionBullets: PropTypes.arrayOf(MessagePropType),
 };
 
 export default withWidth()(SummaryBox);

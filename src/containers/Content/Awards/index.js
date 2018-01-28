@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl } from 'react-intl';
 
 import Grid from 'material-ui/Grid';
 
@@ -12,6 +13,12 @@ import messages from './messages';
 
 class Awards extends React.Component {
   render() {
+    const { intl } = this.props;
+    const end2017 = intl.formatDate(new Date(2017, 11), {
+      year: 'numeric',
+      month: 'short',
+    });
+
     return (
       <Section title={globalMessages.awards} id={AnchorsName.awards}>
         <Grid container justify="center">
@@ -21,6 +28,7 @@ class Awards extends React.Component {
             title={messages.feiInnovationTitle}
             subtitle={messages.feiInnovationSubtitle}
             description={messages.feiInnovationDescription}
+            date={end2017}
           />
           <DescriptionBorderBox
             threeColumn={false}
@@ -28,6 +36,7 @@ class Awards extends React.Component {
             title={messages.academicHighlightTitle}
             subtitle={messages.academicHighlightSubtitle}
             description={messages.academicHighlightDescription}
+            date={end2017}
           />
         </Grid>
       </Section>
@@ -35,4 +44,4 @@ class Awards extends React.Component {
   }
 }
 
-export default Awards;
+export default injectIntl(Awards);

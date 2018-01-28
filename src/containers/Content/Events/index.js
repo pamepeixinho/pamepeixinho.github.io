@@ -36,7 +36,7 @@ class Events extends React.Component {
             description={messages.grupySpDescription}
             startDate={grupySpDate}
           />
-          <SummaryBox
+          {/* <SummaryBox
             subtitle={messages.grupySp}
             description={messages.grupySpDescription}
             startDate={grupySpDate}
@@ -45,10 +45,9 @@ class Events extends React.Component {
             subtitle={messages.grupySp}
             description={messages.grupySpDescription}
             startDate={grupySpDate}
-          />
+          /> */}
         </LeftAlign>
-
-        <LeftAlign>
+        {/* <LeftAlign>
           <SectionSubtitle>
             <FormattedMessage {...messages.attendee} />
           </SectionSubtitle>
@@ -62,7 +61,7 @@ class Events extends React.Component {
             description={messages.grupySpDescription}
             startDate={grupySpDate}
           />
-        </LeftAlign>
+        </LeftAlign> */}
       </Section>
     );
   }

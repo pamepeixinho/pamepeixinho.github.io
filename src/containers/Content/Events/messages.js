@@ -18,6 +18,6 @@ export default defineMessages({
   },
   grupySpDescription: {
     id: 'app.events.grupySpDescription',
-    defaultMessage: 'grupySpDescription grupySpDescrip tion grupySpDescri ptiongru pySpDescription',
+    defaultMessage: 'Presented the QuickSloth project in a lightning talk in GruPySp meetup',
   },
 });

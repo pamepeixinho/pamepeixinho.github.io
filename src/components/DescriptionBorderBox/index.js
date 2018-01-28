@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   border: 1px solid ${Colors.lightGrey};
   border-radius: 4px;
   margin-bottom: 40px;
-  height: calc(100% - 16px);
+  height: calc(100% - 32px);
 `;
 
 const Image = styled.img`
@@ -22,16 +22,19 @@ const Image = styled.img`
 `;
 
 const ContentWrapper = styled.div`
-  padding: 16px;
+  padding: 12px;
 `;
 
 const GridItem = styled(Grid)`
   margin-bottom: 20px !important;
 `;
+const DateDescription = styled.div`
+  color: ${Colors.primary};
+`;
 
 class DescriptionBorderBox extends React.PureComponent {
   render() {
-    const { imageSrc } = this.props;
+    const { imageSrc, date } = this.props;
     const gridProps = {
       item: true,
       xs: 10,
@@ -48,6 +51,7 @@ class DescriptionBorderBox extends React.PureComponent {
                 subtitle={this.props.subtitle}
                 description={this.props.description}
               />
+              {date && <DateDescription> { date } </DateDescription>}
               {this.props.children}
             </ContentWrapper>
           </Wrapper>

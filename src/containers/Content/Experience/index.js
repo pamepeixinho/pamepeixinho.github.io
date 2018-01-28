@@ -9,6 +9,13 @@ import messages from './messages';
 import globalMessages from '../../../messages';
 
 class Experience extends React.Component {
+  internBullets = [
+    messages.sweInternFront,
+    messages.sweInternBack,
+    messages.sweInternApps,
+    messages.sweInternML,
+  ];
+
   render() {
     const { intl } = this.props;
 
@@ -45,6 +52,7 @@ class Experience extends React.Component {
           title={messages.sweInternTitle}
           subtitle={messages.quintoAndar}
           description={messages.sweInternDescription}
+          descriptionBullets={this.internBullets}
           startDate={sweInternStartDate}
           endDate={sweInternEndDate}
         />

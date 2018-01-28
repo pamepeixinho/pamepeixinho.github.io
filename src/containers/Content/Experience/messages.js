@@ -12,7 +12,7 @@ export default defineMessages({
   },
   sweDescription: {
     id: 'app.container.Content.Experience.sweDescription',
-    defaultMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
+    defaultMessage: '   ',
   },
   sweInternTitle: {
     id: 'app.container.Content.Experience.sweInternTitle',
@@ -20,7 +20,23 @@ export default defineMessages({
   },
   sweInternDescription: {
     id: 'app.container.Content.Experience.sweInternDescription',
-    defaultMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
+    defaultMessage: 'During this internship, I learned and gained experience in different areas, such as:',
+  },
+  sweInternFront: {
+    id: 'app.container.Content.Experience.sweInternFront',
+    defaultMessage: `Front-end: part of the team that developed and released the first QuintoAndar's PWA;`,
+  },
+  sweInternBack: {
+    id: 'app.container.Content.Experience.sweInternBack',
+    defaultMessage: 'Back-end: developing and giving maintenance in RESTful APIs',
+  },
+  sweInternApps: {
+    id: 'app.container.Content.Experience.sweInternApps',
+    defaultMessage: 'Mobile apps: developing and being responsible for releases in Android and iOS apps',
+  },
+  sweInternML: {
+    id: 'app.container.Content.Experience.sweInternML',
+    defaultMessage: 'Machine learning: testing params and new features to increase predictors score.',
   },
   quintoAndar: {
     id: 'app.container.Content.Experience.quintoAndar',
