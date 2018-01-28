@@ -14,12 +14,13 @@ export default defineMessages({
   },
   feiInnovationDescription: {
     id: 'app.projects.feiInnovationDescription',
-    defaultMessage: 'Scholarship in Scientific Initiation Research in Computer Vision area ' + 
-    'focused in evaluation and selection of characteristic for object recognition system using bipartide graph',
+    defaultMessage: `InovaFEI is a innovation congress where students presents their graduation conclusion works.
+    The awards are given to the two most innovators in projects. I won in second place presenting my project QuickSloth.
+    `,
   },
   academicHighlightTitle: {
     id: 'app.projects.academicHighlightTitle',
-    defaultMessage: 'Academic highlight 2017',
+    defaultMessage: '2017 Academic Highlight',
   },
   academicHighlightSubtitle: {
     id: 'app.projects.academicHighlightSubtitle',
@@ -27,7 +28,7 @@ export default defineMessages({
   },
   academicHighlightDescription: {
     id: 'app.projects.academicHighlightDescription',
-    defaultMessage: 'Scholarship in Scientific Initiation Research in Computer Vision area ' + 
-    'focused in evaluation and selection of characteristic for object recognition system using bipartide graph',
+    defaultMessage: 'This award is given to students in order to recognize their efforts and good results in FEI' + 
+    ' extracurricular projects and their good grades during the whole course.',
   },
 });
