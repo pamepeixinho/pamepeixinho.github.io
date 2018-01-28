@@ -10,7 +10,7 @@ import messages from './messages';
 
 class Articles extends React.Component {
   render() {
-    const sweStartDate = this.props.intl.formatDate(new Date(2017, 11), {
+    const sweStartDate = this.props.intl.formatDate(new Date(2015, 9), {
       year: 'numeric',
       month: 'short',
     });

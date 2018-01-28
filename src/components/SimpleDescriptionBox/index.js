@@ -8,16 +8,16 @@ import MessagePropType from '../../utils/IntlProptype';
 import Title from '../Title';
 import Subtitle from '../Subtitle';
 
-const Description = styled.p`
+const Description = styled.div`
   font-weight: 300;
   margin-bottom: 0;
   color: ${Colors.grey};
 `;
 
 class SimpleDescriptionBox extends React.PureComponent {
-  renderBullets = (bullet) => {
+  renderBullets = (key, bullet) => {
     return (
-      <li>
+      <li key={key}>
         <FormattedMessage {...bullet} />
       </li>
     );
@@ -38,7 +38,7 @@ class SimpleDescriptionBox extends React.PureComponent {
         <Description>
           <FormattedMessage {...this.props.description} />
           <ul>
-            {this.props.descriptionBullets.map((bullet) => this.renderBullets(bullet))}
+            {this.props.descriptionBullets.map((bullet, index) => this.renderBullets(index, bullet))}
           </ul>
         </Description>
       </div>

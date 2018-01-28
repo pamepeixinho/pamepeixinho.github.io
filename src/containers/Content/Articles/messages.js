@@ -8,14 +8,18 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   wvcTitle: {
     id: 'app.container.Content.Articles.wvcTitle',
-    defaultMessage: 'WVC',
+    defaultMessage: 'A Bipartite Graph Model Approach For Discriminant Features Evaluation',
   },
   wvcSubtitle: {
     id: 'app.container.Content.Articles.wvcSubtitle',
-    defaultMessage: 'wvcSubtitle WVC',
+    defaultMessage: 'WVC (Computer Vision Workshop)',
   },
   wvcDescription: {
     id: 'app.container.Content.Articles.wvcDescription',
-    defaultMessage: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
+    defaultMessage: `Article published in Proceedings of WVC 2015 with the title
+    "A Bipartite Graph Model Approach For Discriminant Features Evaluation". In this article, we propose a
+    bipartite graph model able to evaluate how much a feature is discriminant, according to our metric
+    based in graph topology. This article was produced using my scientific initiation research.
+    It was presented in the Oral Session in São Carlos, SP - Brazil.`,
   },
 });
