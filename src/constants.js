@@ -17,4 +17,5 @@ export const SocialLinks = {
   instagram: 'https://www.instagram.com/pamepeixinho/',
 };
 
+
 export default AnchorsName;
