@@ -10,6 +10,7 @@ export const AnchorsName = {
   skills: 'skills',
 };
 
+
 export const SocialLinks = {
   facebook: 'https://www.facebook.com/pamepeixinho',
   linkedin: 'https://www.linkedin.com/in/pamepeixinho/',
