@@ -9,6 +9,7 @@ export const AnchorsName = {
   skills: 'skills',
 };
 
+
 export const SocialLinks = {
   facebook: 'https://www.facebook.com/pamepeixinho',
   linkedin: 'https://www.linkedin.com/in/pamepeixinho/',
@@ -16,5 +17,6 @@ export const SocialLinks = {
   twitter: 'https://twitter.com/pamepeixinho',
   instagram: 'https://www.instagram.com/pamepeixinho/',
 };
+
 
 export default AnchorsName;
