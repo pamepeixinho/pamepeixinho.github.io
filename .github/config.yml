@@ -1,0 +1,1 @@
+PR_TITLE_REGEX: ^\[(feature|bugfix|improvement|library|prerelease|release|hotfix)\/([a-z]{1,5}[0-9]{1,5})\].+$ 
